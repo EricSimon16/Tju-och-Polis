@@ -21,7 +21,7 @@ public class Person
         Inventory = new List<string>();
     }
 
-    // Slumpmässig rörelseriktning
+    // random rörelseriktning
     public void SetRandomDirection()
     {
         int direction = random.Next(0, 6);
@@ -122,7 +122,7 @@ public class City
     {
         Console.Clear();
 
-        // Spelplanens ram
+        // Ramen på spelplanen
         Console.SetCursorPosition(0, 0);
         Console.WriteLine("+" + new string('-', 102) + "+");
         for (int y = 1; y <= 25; y++)
@@ -143,10 +143,10 @@ public class City
     // Visa staden i konsollen
     public void DrawCity()
     {
-        // Rita ramarna först
+        // Ritar ramarna 
         DrawBorders();
 
-        // Skapa en spelplan med storlek 100x25 (inuti ramarna)
+        // Skapa en spelplan med storlek 100x25 
         string[,] cityMap = new string[100, 25];
 
         // Fyll enbart de positioner där det finns personer
@@ -164,7 +164,7 @@ public class City
                 {
                     Console.SetCursorPosition(x + 1, y + 1);  // Placera markören på rätt plats inom ramarna
 
-                    // Ställ in färg baserat på personens typ
+                    // Ställer in färg baserat på personens typ
                     switch (cityMap[x, y])
                     {
                         case "M":
@@ -225,7 +225,7 @@ public class City
         DrawCity();  // Rita sista versionen av staden och statistik
     }
 
-    // Hantera interaktioner mellan personer
+    // Hantera interaktionerna mellan personerna
     private void HandleInteraction(Person p1, Person p2)
     {
         if (p1 is Police && p2 is Thief)
