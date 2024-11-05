@@ -143,6 +143,8 @@ public class City
     // Visa staden i konsollen
     public void DrawCity()
     {
+
+        Console.BufferHeight = Math.Max(Console.BufferHeight, 32);
         // Ritar ramarna 
         DrawBorders();
 
