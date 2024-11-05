@@ -60,10 +60,10 @@ public class Citizen : Person
     public Citizen()
     {
         Symbol = "M";
-        Inventory.Add("Nycklar");
-        Inventory.Add("Mobiltelefon");
-        Inventory.Add("Pengar");
-        Inventory.Add("Klocka");
+        Inventory.Add("Nycklar ");
+        Inventory.Add("Mobiltelefon ");
+        Inventory.Add("Pengar ");
+        Inventory.Add("Klocka ");
     }
 }
 
